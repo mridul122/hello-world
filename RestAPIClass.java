@@ -42,7 +42,7 @@ public class RestAPIClass {
               .param("inputtype  ", "textquery")
               .param("fields", "photos,formatted_address,name,opening_hours,rating")
               .param("locationbias", "circle:2000@47.6918452,-122.2226413")
-              .param("key", "AIzaSyC8nIqGCzPIEpHdnU5K66Z44pkuDVEaq-k-k")
+              .param("key", "YOURKEY")  //please use your key
               .when().get("/maps/api/place/findplacefromtext/json")
               .then().assertThat().statusCode(200).and().body("status",equalTo("REQUEST_DENIED")).extract().response();
                String response = res.asString();
